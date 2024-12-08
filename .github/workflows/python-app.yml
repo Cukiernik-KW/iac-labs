@@ -3,6 +3,9 @@
 
 name: Python application
 
+matrix:
+  os: [ubuntu-latest, windows-latest]
+
 on:
   push:
     branches: [ "main" ]
@@ -12,9 +15,11 @@ on:
 permissions:
   contents: read
 
+
 jobs:
+  
   build:
-    runs-on: ubuntu-latest
+    runs-on: matrix.os
     defaults:
       run:
         working-directory: ./example-app
