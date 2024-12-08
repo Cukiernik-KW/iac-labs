@@ -24,7 +24,7 @@ jobs:
       with:
         python-version: "3.11"
     - name: Install Poetry
-      uses: snok/install-poetry@1.3.4
+      uses: snok/install-poetry@v1.3.4
     - name: Install deps
       run: poetry install --no-root
     - name: Run Lint
